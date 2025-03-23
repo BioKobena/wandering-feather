@@ -1,0 +1,47 @@
+on:
+    workflow_dispatch:
+      inputs:
+        releaseType:
+          description: Release stable or beta?
+          required: true
+          type: choice
+          options:
+            - beta
+            - stable
+  
+        semverType:
+          description: semver type?
+          type: choice
+          options:
+            - patch
+            - minor
+            - major
+
+  name: Trigger Release
+  
+name: 'Install'
+description: 'Set up and install dependencies'
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Lock Corepack version
+      shell: bash
+      run: pnpm i -g corepack@0.31.0
+
+    - name: Use Node.js 18
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: pnpm
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Install Dependencies
+      shell: bash
+      run: |
+        corepack enable
+        node -v
+        pnpm -v
+        pnpm install
