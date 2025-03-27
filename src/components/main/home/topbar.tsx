@@ -1,12 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import featherLight from "@/assets/images/plume-light.png";
-import featherDark from "@/assets/images/plume-dark.png";
-import feather from "@/assets/images/feather.png";
-import Image from "next/image";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-
 const NavBar = () => {
     const [nav, setNav] = useState(false);
     const [color, setColor] = useState("transparent");
@@ -18,9 +13,15 @@ const NavBar = () => {
 
     useEffect(() => {
         const changeColor = () => {
+            //             background: rgba( 17, 3, 3, 0.1 );
+            // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            // backdrop-filter: blur( 10.5px );
+            // -webkit-backdrop-filter: blur( 10.5px );
+            // border-radius: 10px;
+            // border: 1px solid ;
             if (window.scrollY >= 90) {
-                setColor("#ffffff");
-                setTextColor("#000000");
+                setColor("rgba( 255, 255, 255, 0.1 )");
+                setTextColor("#ffff");
             } else {
                 setColor("transparent");
                 setTextColor("#ffffff");
@@ -32,19 +33,10 @@ const NavBar = () => {
     return (
         <div
             style={{ backgroundColor: `${color}` }}
-            className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+            className="fixed left-0 top-0 w-full z-10 ease-in duration-300 border border-white"
         >
             <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
                 <Link href="/">
-                    <Image
-                        className="dark:invert bg-background-inherit"
-                        src={featherDark}
-                        // src={feather}
-                        alt="Vercel logomark"
-                        width={150}
-                        height={150}
-                        // src="../../../assets/images/plume-light.png"
-                    />
                 </Link>
                 <ul
                     style={{ color: `${textColor}` }}
@@ -57,7 +49,7 @@ const NavBar = () => {
                         <Link href="/poems">Poèmes</Link>
                     </li>
                     <li className="p-4">
-                        <Link href="/poems">Inspirations</Link>
+                        <Link href="/story">Inspirations</Link>
                     </li>
                     <li className="p-4">
                         <Link href="/about">À propos</Link>
