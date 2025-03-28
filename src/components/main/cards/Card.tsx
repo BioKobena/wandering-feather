@@ -1,21 +1,15 @@
 import React from "react";
-import {
-    Avatar,
-    Button,
-    Card,
-    CardBody,
-    CardFooter,
-    CardHeader,
-} from "@heroui/react";
+import { Avatar, Card, CardBody, CardHeader } from "@heroui/react";
 
-type Props = {
-    label?: string;
-    theme?: "primary";
-    onPress?: () => void;
-};
+// type Props = {
+//     label?: string;
+//     theme?: "primary";
+//     onPress?: () => void;
+// };
 
-const CardPoems = ({ label, theme, onPress }: Props) => {
-    const [isFollowed, setIsFollowed] = React.useState(false);
+// const CardPoems = ({ label, theme, onPress }: Props) => { @BioKobena unsed props for my code, I will come back on it
+const CardPoems = () => {
+    //const [isFollowed, setIsFollowed] = React.useState(false);
 
     return (
         <Card className="max-w-[300px] border">
@@ -37,14 +31,11 @@ const CardPoems = ({ label, theme, onPress }: Props) => {
             <CardBody className="px-3 py-0 text-small text-default-400">
                 <p>
                     Frontend developer and UI/UX enthusiast. Join me on this
-                    coding adventure!
-                    Frontend developer and UI/UX enthusiast. Join me on this
-                    coding adventure!
-                    Frontend developer and UI/UX enthusiast. Join me on this
-                    coding adventure!
-                    Frontend developer and UI/UX enthusiast. Join me on this
-                    coding adventure!
-                    
+                    coding adventure! Frontend developer and UI/UX enthusiast.
+                    Join me on this coding adventure! Frontend developer and
+                    UI/UX enthusiast. Join me on this coding adventure! Frontend
+                    developer and UI/UX enthusiast. Join me on this coding
+                    adventure!
                 </p>
             </CardBody>
         </Card>
