@@ -5,7 +5,7 @@ function Plume() {
   const isMobile = useMediaQuery("(max-width: 992px)");
   return (
     <>
-      <div className={isMobile ? "py-6 pb-6 rounded-md" : "py-46 pb-16 rounded-md"}>
+      <div className={isMobile ? "py-6 pb-6 rounded-md" : "py-40 pb-10 rounded-md"}>
         <h1
           className={isMobile
             ? `font-departure  font-(family-name:--font-karla) font-bold text-3xl relative z-10 text-center h-[70px] leading-tight dark:from-[#FFFFFF] dark:to-[#4B4B4B]`

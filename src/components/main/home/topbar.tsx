@@ -42,19 +42,19 @@ const NavBar = () => {
                     style={{ color: `${textColor}` }}
                     className="hidden sm:flex"
                 >
-                    <li className="p-4">
+                    <li className="p-4 font-(family-name:--font-karla) font-medium">
                         <Link href="/">Histoires</Link>
                     </li>
-                    <li className="p-4">
+                    <li className="p-4 font-(family-name:--font-karla) font-medium">
                         <Link href="/poems">Poèmes</Link>
                     </li>
-                    <li className="p-4">
+                    <li className="p-4 font-(family-name:--font-karla) font-medium">
                         <Link href="/story">Inspirations</Link>
                     </li>
-                    <li className="p-4">
+                    <li className="p-4 font-(family-name:--font-karla) font-medium">
                         <Link href="/about">À propos</Link>
                     </li>
-                    <li className="p-4">
+                    <li className="p-4 font-(family-name:--font-karla) font-medium">
                         <Link href="/contact">Contacts</Link>
                     </li>
                 </ul>
