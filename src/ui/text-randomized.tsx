@@ -18,9 +18,9 @@ export function RandomizedTextEffect({ text }: AnimatedTextProps) {
   );
 
   const animateText = useCallback(async () => {
-    const duration = 5000;
-    const revealDuration = 800;
-    const initialRandomDuration = 1000;
+    const duration = 500;
+    const revealDuration = 80;
+    const initialRandomDuration = 100;
 
     const generateRandomText = () =>
       text
