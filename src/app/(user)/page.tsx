@@ -1,4 +1,5 @@
 "use client";
+import Newsletter from "@/components/main/form/Newletter";
 import HomeContent from "@/components/main/home/main";
 import Plume from "@/components/main/home/welcomeRandom";
 import HorizontalScroll from "@/ui/scroll";
@@ -14,8 +15,11 @@ export default function Home() {
             <Plume />
             <HomeContent />
 
-            <div >
+            <div>
                 <HorizontalScroll />
+            </div>
+            <div>
+                <Newsletter />
             </div>
         </div>
     );

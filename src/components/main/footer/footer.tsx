@@ -191,7 +191,7 @@ const Footer = () => {
                     </div>
                     <div className="flex text-center md:flex-row flex-col-reverse gap-3 justify-between py-2">
                         <span className="font-medium  text-center">
-                            &copy; {date} kobejs. All Rights Reserved.
+                            &copy; {date} Plume vagabonde. All Rights Reserved.
                         </span>
                     </div>
                 </div>

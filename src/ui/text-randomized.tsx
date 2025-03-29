@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
 
 const lettersAndSymbols = 'abcdefghijklmnopqrstuvwxyz!@#$%^&*-_+=;:<>,';
@@ -18,9 +17,9 @@ export function RandomizedTextEffect({ text }: AnimatedTextProps) {
   );
 
   const animateText = useCallback(async () => {
-    const duration = 500;
-    const revealDuration = 80;
-    const initialRandomDuration = 100;
+    const duration = 100;
+    const revealDuration = 30;
+    const initialRandomDuration = 50;
 
     const generateRandomText = () =>
       text
