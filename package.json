@@ -19,6 +19,8 @@
     "@mui/material": "^6.4.8",
     "@mui/material-nextjs": "^6.4.3",
     "@react-icons/all-files": "^4.1.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "embla-carousel": "^8.5.2",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-class-names": "^8.5.2",

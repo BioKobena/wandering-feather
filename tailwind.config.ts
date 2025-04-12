@@ -1,17 +1,29 @@
-import {heroui} from "@heroui/react";
+import { heroui } from "@heroui/react";
 
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
-    // ...
-    // make sure it's pointing to the ROOT node_module
-    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        karla: ['var(--font-karla)', 'sans-serif'],
+        departure: ['var(--font-departure)', 'sans-serif'],
+      },
+    },
+    screens: {
+      "xs": "480px", // Extra small devices
+      "sm": "640px", // Small devices
+      "md": "768px", // Medium devices
+      "lg": "1024px", // Large devices
+      "xl": "1280px", // Extra large devices
+      "2xl": "1536px", // 2X large devices
+      "3xl": "1920px", // Custom breakpoint for very large screens
+    },
   },
   darkMode: "class",
-  plugins: [heroui()]
-}
+  plugins: [heroui()],
+};
 
 export default config;

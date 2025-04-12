@@ -1,8 +1,4 @@
 import * as React from "react";
-import {
-    useMediaQuery,
-} from "@mui/material";
-
 
 export default function Newsletter() {
     const [emailError, setEmailError] = React.useState(false);
@@ -53,21 +49,17 @@ export default function Newsletter() {
     //     });
     // };
 
-    const isMobile = useMediaQuery("(max-width: 912px)");
 
     return (
         <div className="w-xl flex flex-col justify-center items-center">
-            <h1
-                className={isMobile
-                    ? `font-departure  font-(family-name:--font-karla) font-bold text-3xl relative text-center h-[40px] leading-tight text-white border-b-1 m-4`
-                    : "font-departure  font-(family-name:--font-karla) font-bold text-5xl relative text-center h-[100px] md:h-auto leading-tight text-white border-b-2 w-full m-4 hover:bg-white hover:border-t-2 hover:border-slate-200 hover:text-black rounded-xs transition duration-550"}
-            >
+           
+            <h1 className="font-bold lg:text-4xl text-3xl relative text-center lg:p-1 p-0 lg:h-[80px] xl:h-[70px] h-[50px] md:h-auto leading-tight text-white border-b-2 lg:border-b-4 border-slate-200 lg:w-full m-4 hover:bg-white hover:border-t-2 hover:border-slate-200 hover:text-black rounded-xs transition duration-550">
                 Souscrire aux newsletter
             </h1>
 
-            <div className="w-full hover-button relative flex items-center overflow-hidden  text-white hover:text-black md:text-2xl">
+            <div className="w-full hover-button relative flex items-center overflow-hidden  text-white hover:text-black md:text-2xl mt-4">
                 <form className="z-2 w-full h-full flex flex-col justify-center items-center gap-4">
-                    <div className={isMobile ? "m-2" : "w-full m-2"}>
+                    <div className="lg:w-full lg:m-2 sm:m-2">
                         <input
                             color="white"
                             type="email"
@@ -76,7 +68,7 @@ export default function Newsletter() {
                             placeholder="Nom & prénoms"
                         />
                     </div>
-                    <div className={isMobile ? "m-2" : "w-full m-2"}>
+                    <div className="lg:w-full lg:m-2 sm:m-2">
                         <input
                             type="email"
                             name="newsletter_email"
