@@ -16,7 +16,7 @@ function Oeuvres() {
                             className="mx-auto w-[85%]"
                         />
                         <h1 className="text-xl font-semibold tracking-tight text-white mt-4">
-                            Les perspectives de l’harmattan
+                            Les perspectives de l&aops;harmattan
                         </h1>
                     </div>
                 </div>
@@ -40,11 +40,11 @@ function Oeuvres() {
                         }}
                     >
                         À travers des vers poignants, ce recueil de poésie
-                        transporte le lecteur dans un monde d’émotions, de
+                        transporte le lecteur dans un monde d&aops;émotions, de
                         questionnements et de réflexions profondes. Du doux
-                        murmure de l’amour à la mélancolie des adieux, en
+                        murmure de l&aops;amour à la mélancolie des adieux, en
                         passant par les défis de la vie quotidienne et les
-                        critiques sociales, l’auteur explore une palette variée
+                        critiques sociales, l&aops;auteur explore une palette variée
                         de thèmes universels.
                     </p>
 
@@ -55,11 +55,11 @@ function Oeuvres() {
                             animationFillMode: "forwards",
                         }}
                     >
-                        Les poèmes, empreints de sensibilité et d’authenticité,
-                        témoignent d’une introspection profonde et offrent une
+                        Les poèmes, empreints de sensibilité et d&aops;authenticité,
+                        témoignent d&aops;une introspection profonde et offrent une
                         vision intime du vécu. Un voyage poétique captivant qui
-                        célèbre la complexité de l’existence et invite le
-                        lecteur à se perdre dans les méandres de l’âme humaine.
+                        célèbre la complexité de l&aops;existence et invite le
+                        lecteur à se perdre dans les méandres de l&aops;âme humaine.
                     </p>
                 </div>
             </div>

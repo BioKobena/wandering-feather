@@ -2,8 +2,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Image from "next/image";
-import logo from "./feather.ico";
 const NavBar = () => {
     const [nav, setNav] = useState(false);
     const [color, setColor] = useState("transparent");
@@ -36,7 +34,6 @@ const NavBar = () => {
             style={{ backgroundColor: `${color}` }}
             className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
         >
-            {/* Sample for news */}
 
             {isVisible && (
                 <div className="relative bg-green-500 text-center xs:bg-yellow-500 sm:bg-red-500 md:bg-blue-500 lg:bg-indigo-500 xl:bg-purple-500 3xl:bg-gray-500 p-2 font-karla">
