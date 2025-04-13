@@ -1,9 +1,11 @@
 "use client";
-import { Spinner } from "@heroui/react";
+import React from "react";
+import { CircularProgress } from "@mui/material";
+
 export default function Loading() {
-    return (
-        <div className="w-full h-full absolute top-[50%] left-[50%]">
-            <Spinner color="primary" />
-        </div>
-    );
+  return (
+    <div className="w-full h-screen flex items-center justify-center">
+      <CircularProgress color="primary" />
+    </div>
+  );
 }

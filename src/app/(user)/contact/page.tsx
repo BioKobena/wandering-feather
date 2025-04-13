@@ -1,9 +1,12 @@
+import { Contacts } from "@/components/main/contact/Form";
 import React from "react";
+
 
 const ContactPage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      ContactPage
+    <div className="w-full min-h-screen flex flex-col justify-center items-center p-4 gap-8 text-white mt-0">
+      <div className="fixed inset-0 -z-10 animate-gradient-fade bg-gradient-to-r from-[#1e293b] via-[#334155] to-[#1e293b] opacity-30 blur-sm" />
+      <Contacts />
     </div>
   );
 };

@@ -9,6 +9,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -26,9 +27,10 @@
   syntax: '<angle>';
 }
 
-*{
+* {
   scroll-behavior: smooth;
 }
+
 :root {
   --background: #0000;
   --foreground: #171717;
@@ -52,4 +54,4 @@ body {
   background: var(--background);
   /* background-color: #fff; */
   color: var(--foreground);
-} 
+}

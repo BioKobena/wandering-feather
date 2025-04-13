@@ -12,12 +12,20 @@ const config = {
         departure: ['var(--font-departure)', 'sans-serif'],
       },
       animation: {
-        border: 'border 4s linear infinite',
+        border: 'border 2s linear infinite',
+        'gradient-fade': 'gradientFade 10s ease-in-out infinite',
       },
       keyframes: {
         border: {
           to: { '--border-angle': '360deg' },
         },
+        gradientFade: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
+      backgroundSize: {
+        'size-200': '200% 200%',
       },
     },
     screens: {

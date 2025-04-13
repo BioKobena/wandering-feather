@@ -1,13 +1,53 @@
-"use client"
-import React from 'react'
-
+"use client";
+import React from "react";
+import axios from "axios";
+import { Skeleton } from "@mui/material";
 
 const PoemsPage = () => {
-  return (
-    <div className='flex flex-col items-center justify-center h-screen'>
-      <h1 className="font-bold lg:text-5xl text-3xl relative text-center p-0 lg:h-[80px] xl:h-[70px] h-[50px] md:h-auto leading-tight text-white border-b-2 lg:border-b-4 border-slate-200 lg:w-full m-4 hover:bg-white hover:border-t-2 hover:border-slate-200 hover:text-black rounded-xs transition duration-550">On m&quot;a dit...</h1>
-    </div>
-  )
-}
+  const [poems, setPoems] = React.useState<[]>([]);
 
-export default PoemsPage
+  React.useEffect(() => {
+    const fetchPoems = async () => {
+      try {
+        const response = await axios.get("/api/poems");
+        setPoems(response.data);
+      } catch (error) {
+        console.error("Error fetching poems:", error);
+      }
+    };
+
+    fetchPoems();
+  }, []);
+
+  const skeletonCount = 5 - poems.length;
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <div className="flex flex-col items-center justify-center w-full max-w-md">
+
+        {poems.length < 5 &&
+          [...Array(skeletonCount)].map((_, index) => (
+            <div
+              key={`skeleton-${index}`}
+              className="p-4 bg-gray-900 rounded-md m-2 w-full"
+            >
+              <Skeleton
+                variant="text"
+                width="60%"
+                height={30}
+                sx={{ bgcolor: "grey.800" }}
+              />
+              <Skeleton
+                variant="text"
+                width="40%"
+                height={20}
+                sx={{ bgcolor: "grey.700" }}
+              />
+            </div>
+          ))}
+      </div>
+    </div>
+  );
+};
+
+export default PoemsPage;

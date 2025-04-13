@@ -44,7 +44,7 @@ const NavBar = () => {
                     >
                         &times;
                     </button>
-                    Bienvenue sur la plume vagabonde😁
+                    Bienvenue sur la plume vagabonde😁📕
                 </div>
             )}
             <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
