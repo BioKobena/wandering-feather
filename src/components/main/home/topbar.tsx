@@ -39,7 +39,7 @@ const NavBar = () => {
             {/* Sample for news */}
 
             {isVisible && (
-                <div className="relative bg-green-500 text-center xs:bg-yellow-500 sm:bg-red-500 md:bg-blue-500 lg:bg-indigo-500 xl:bg-purple-500 3xl:bg-gray-500 p-2">
+                <div className="relative bg-green-500 text-center xs:bg-yellow-500 sm:bg-red-500 md:bg-blue-500 lg:bg-indigo-500 xl:bg-purple-500 3xl:bg-gray-500 p-2 font-karla">
                     <button
                         onClick={handleClose}
                         className="absolute top-2 right-2 text-white bg-gray-800 hover:bg-gray-600 rounded-full w-6 h-6 flex items-center justify-center"
@@ -58,19 +58,19 @@ const NavBar = () => {
                     style={{ color: `${textColor}` }}
                     className="hidden sm:flex"
                 >
-                    <li className="p-4 font-(family-name:--font-karla) font-medium">
+                    <li className="p-4 font-medium">
                         <Link href="/">Histoires</Link>
                     </li>
-                    <li className="p-4 font-(family-name:--font-karla) font-medium">
+                    <li className="p-4 font-medium">
                         <Link href="/poems">Poèmes</Link>
                     </li>
-                    <li className="p-4 font-(family-name:--font-karla) font-medium">
+                    <li className="p-4 font-medium">
                         <Link href="/story">Inspirations</Link>
                     </li>
-                    <li className="p-4 font-(family-name:--font-karla) font-medium">
+                    <li className="p-4 font-medium">
                         <Link href="/about">À propos</Link>
                     </li>
-                    <li className="p-4 font-(family-name:--font-karla) font-medium">
+                    <li className="p-4 font-medium">
                         <Link href="/contact">Contacts</Link>
                     </li>
                 </ul>

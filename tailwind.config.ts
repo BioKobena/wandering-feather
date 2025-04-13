@@ -11,6 +11,14 @@ const config = {
         karla: ['var(--font-karla)', 'sans-serif'],
         departure: ['var(--font-departure)', 'sans-serif'],
       },
+      animation: {
+        border: 'border 4s linear infinite',
+      },
+      keyframes: {
+        border: {
+          to: { '--border-angle': '360deg' },
+        },
+      },
     },
     screens: {
       "xs": "480px", // Extra small devices
