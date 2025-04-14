@@ -1,10 +1,10 @@
-name: Pipeline of wandering feather
+name: Plume vagabonde
 
 on:
   workflow_dispatch:
     inputs:
       releaseType:
-        description: Release stable or beta?
+        description: Release stable
         required: true
         type: choice
         options:
@@ -28,14 +28,46 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: 20
-          cache: yarn
+          version: latest
+
+      - name: Lock Corepack version
+        shell: bash
+        run: pnpm i -g corepack@0.31.0
+
+      # - name: Use Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+      #     cache: 'pnpm'
+      #     registry-url: 'https://registry.npmjs.org'
+
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        shell: bash
+        run: pnpm install
 
       - name: Run Lint
-        run: yarn
+        shell: bash
+        run: pnpm lint
+
+      # - name: Run TypeScript Check
+      #   shell: bash
+      #   run: pnpm type-check
+
+      # - name: Check Formatting
+      #   shell: bash
+      #   run: pnpm format:check
+
+      # - name: Run Tests
+      #   shell: bash
+      #   run: pnpm test
+
+      - name: Build Project
+        shell: bash
+        run: pnpm run build
